@@ -39,8 +39,10 @@ Welcome to the 2023 retreat hackathon. The goal of this project is to get you (a
 
 ## [Step 1 Setup Nerves](docs/step_1.md)
 
-When you are ready for Step 2 please:
+## [Step 2 Read from the sensor](docs/step_2.md)
+
+When you are ready for Step 3 please:
 
 ```sh
-git checkout step_2
+git checkout step_3
 ```

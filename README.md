@@ -41,8 +41,10 @@ Welcome to the 2023 retreat hackathon. The goal of this project is to get you (a
 
 ## [Step 2 Read from the sensor](docs/step_2.md)
 
-When you are ready for Step 3 please:
+## [Step 3 Code organization and development best practices](docs/step_3.md)
+
+When you are ready for Step 4 please:
 
 ```sh
-git checkout step_3
+git checkout step_4
 ```

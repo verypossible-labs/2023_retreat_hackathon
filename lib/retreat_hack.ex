@@ -1,18 +1,17 @@
 defmodule RetreatHack do
-  @moduledoc """
-  Documentation for RetreatHack.
-  """
+  def get_temperature do
+    temp_hum_sensor_module().get_temperature()
+  end
 
-  @doc """
-  Hello world.
+  def get_humidity do
+    temp_hum_sensor_module().get_humidity()
+  end
 
-  ## Examples
-
-      iex> RetreatHack.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def temp_hum_sensor_module do
+    Application.get_env(
+      :retreat_hack,
+      :temp_hum_sensor_module,
+      RetreatHack.TempHumSensor.AHT20
+    )
   end
 end

@@ -10,6 +10,7 @@ defmodule RetreatHack.MixProject do
       app: @app,
       version: @version,
       elixir: "~> 1.11",
+      elixirc_paths: elixirc_paths(Mix.env()),
       archives: [nerves_bootstrap: "~> 1.11"],
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -34,6 +35,7 @@ defmodule RetreatHack.MixProject do
       {:shoehorn, "~> 0.9.1"},
       {:ring_logger, "~> 0.9.0"},
       {:toolshed, "~> 0.3.0"},
+      {:mox, "~> 1.0"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.13.0", targets: @all_targets},
@@ -60,4 +62,7 @@ defmodule RetreatHack.MixProject do
       strip_beams: Mix.env() == :prod or [keep: ["Docs"]]
     ]
   end
+
+  defp elixirc_paths(:test), do: ["test/support", "lib"]
+  defp elixirc_paths(_), do: ["lib"]
 end

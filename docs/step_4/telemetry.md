@@ -1,0 +1,1 @@
+- Example code (probably a Genserver) for reporting telemetry to AWS every 30 seconds

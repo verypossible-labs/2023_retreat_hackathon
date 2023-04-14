@@ -1,0 +1,7 @@
+- install mqtt library (update dependencies)
+  - https://hex.pm/packages/tortoise311
+  - https://hex.pm/packages/jackalope
+  - https://github.com/emqx/emqtt
+- Example code to configure mqtt lib with certs and endpoint
+- subscribe to topics
+- demo sending basic message and how to check in AWS that message was received

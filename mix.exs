@@ -36,6 +36,10 @@ defmodule RetreatHack.MixProject do
       {:ring_logger, "~> 0.9.0"},
       {:toolshed, "~> 0.3.0"},
       {:mox, "~> 1.0"},
+      {:circuits_i2c, "~> 1.0"},
+      {:nerves_key, "~> 1.1"},
+      {:tortoise311, "~> 0.11"},
+      {:certifi, "~> 2.11"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.13.0", targets: @all_targets},
@@ -46,8 +50,7 @@ defmodule RetreatHack.MixProject do
       # bumps to Nerves systems. Since these include Linux kernel and Erlang
       # version updates, please review their release notes in case
       # changes to your application are needed.
-      {:nerves_system_rpi0, "~> 1.19", runtime: false, targets: :rpi0},
-      {:circuits_i2c, "~> 1.2", targets: :rpi0}
+      {:nerves_system_rpi0, "~> 1.19", runtime: false, targets: :rpi0}
     ]
   end
 

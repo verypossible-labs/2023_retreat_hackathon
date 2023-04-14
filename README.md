@@ -43,8 +43,10 @@ Welcome to the 2023 retreat hackathon. The goal of this project is to get you (a
 
 ## [Step 3 Code organization and development best practices](docs/step_3.md)
 
-When you are ready for Step 4 please:
+## [Step 4 Cloud connectivity](docs/step_4.md)
+
+When you are ready for Step 5 please:
 
 ```sh
-git checkout step_4
+git checkout step_5
 ```

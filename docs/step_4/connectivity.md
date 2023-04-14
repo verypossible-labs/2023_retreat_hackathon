@@ -1,0 +1,4 @@
+- install vintage_net (add dependency)
+- show how to configure vintage net for wifi
+  - extra: show how to setup vintage net wizard (use captive portal)
+- show how after building firmware, we are reporting telemetry to AWS

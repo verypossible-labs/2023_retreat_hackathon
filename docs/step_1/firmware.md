@@ -3,7 +3,7 @@
 ## Build firmware
 
 ```sh
-mix firmware
+MIX_TARGET=rpi0 mix firmware
 ```
 
 ## Burn firmware
@@ -11,7 +11,7 @@ mix firmware
 Insert your Micro SD card into you USB hub so that your computer can recognize the card and run the burn command:
 
 ```sh
-mix burn
+MIX_TARGET=rpi0 mix burn
 ```
 
 You will need confirm that the firmware is being written to the correct disk and may need to provide administrator permissions.

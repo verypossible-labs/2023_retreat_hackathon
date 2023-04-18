@@ -26,7 +26,7 @@ asdf install
 - Fetch dependencies:
 
 ```sh
-mix deps.get
+MIX_TARGET=rpi0 mix deps.get
 ```
 
 [next](firmware.md)

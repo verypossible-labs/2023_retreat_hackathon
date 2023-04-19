@@ -1,1 +1,4 @@
-- Example code (probably a Genserver) for reporting telemetry to AWS every 30 seconds
+```elixir
+RetreatHack.connect_to_mqtt
+RetreatHack.publish_message("Hello world!")
+```

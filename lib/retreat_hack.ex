@@ -18,7 +18,7 @@ defmodule RetreatHack do
     )
   end
 
-  def publish_message do
+  def connect_to_mqtt do
     {:ok, pid} =
       Tortoise311.Connection.start_link(
         client_id: fetch_config(:device_id),
@@ -44,6 +44,10 @@ defmodule RetreatHack do
         },
         handler: {Tortoise311.Handler.Logger, []}
       )
+  end
+
+  def publish_message(message) do
+    Tortoise311.publish(fetch_config(:device_id), "$aws/rules/mydata/test", message)
   end
 
   def ca_certs() do

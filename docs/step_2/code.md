@@ -37,6 +37,6 @@ I2C.write(ref, 0x38, <<0xAC, 0x33, 0x00>>)
 {:ok, <<status, humidity::size(20), temperature::size(20), checksum>>} = I2C.read(ref, 0x38, 7)
 ```
 
-Try to implement your sensor reading code as a module. After writing your new module, follow the process for building and burning a new firmware image and try to read the sensor data with your new module. You can [look here](../../lib/retreat_hack/temp_hum_sensor.ex) for an example if you are stuck.
+Try to implement your sensor reading code as a module. After writing your new module, follow the process for building and burning a new firmware image and try to read the sensor data with your new module. Some techniques that may be useful during this portion are bitwise operations, Elixir bitstring parsing and pattern matching. You can [look here](../../lib/retreat_hack/temp_hum_sensor.ex) for an example if you are stuck. The above code was implemented in the form of a Genserver to help manage state (I2C pid) and to provide a clear public API for our sensor code. If you are unfamiliar with Elixir or Genservers then do not feel as though you need to attempt to implement any additional complexity related to Genservers or state management at this step.
 
 Once you are succesfully sending commands and reading data from the sensor, please return to [the README](../../README.md) and follow the instructions to proceed to step 3.

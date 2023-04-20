@@ -10,10 +10,24 @@ Application.start(:nerves_bootstrap)
 
 config :retreat_hack, target: Mix.target()
 config :retreat_hack, env: Mix.env()
-config :retreat_hack, device_cert: File.read!("priv/" <> System.get_env("DEVICE_CERT"))
-config :retreat_hack, device_key: File.read!("priv/" <> System.get_env("DEVICE_KEY"))
+
+cert_path = "priv/" <> System.get_env("DEVICE_CERT")
+key_path = "priv/" <> System.get_env("DEVICE_KEY")
+signer_cert_path = "priv/" <> System.get_env("SIGNER_CERT")
+
+if File.exists?(cert_path) do
+  config :retreat_hack, device_cert: File.read!(cert_path)
+end
+
+if File.exists?(key_path) do
+  config :retreat_hack, device_key: File.read!(key_path)
+end
+
+if File.exists?(signer_cert_path) do
+  config :retreat_hack, signer_cert: File.read!(signer_cert_path)
+end
+
 config :retreat_hack, device_id: System.get_env("DEVICE_ID")
-config :retreat_hack, signer_cert: File.read!("priv/" <> System.get_env("SIGNER_CERT"))
 
 # Customize non-Elixir parts of the firmware. See
 # https://hexdocs.pm/nerves/advanced-configuration.html for details.

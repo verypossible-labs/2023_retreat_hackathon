@@ -20,3 +20,9 @@ erl_crash.dump
 priv/*.cert
 priv/*.key
 priv/*.pem
+
+# Ignore environment files
+.envrc
+
+# Ignore system files
+.DS_Store

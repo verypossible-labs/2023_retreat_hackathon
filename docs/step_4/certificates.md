@@ -1,7 +1,3 @@
-- install nerves key
-- show how to generate key/cert (maybe a CA for AWS)
-  https://hexdocs.pm/nerves_key/readme.html#signer-certificates
-
 # Securing Communication
 
 ## Setup certificate authority
@@ -32,10 +28,6 @@ export THING_NAME=my-thing
 mix nerves_key.device create $THING_NAME --signer-cert ca_cert.cert --signer-key ca_cert.key
 ```
 
-```
-mix nerves_key.device create demo2023dr --signer-cert certh_auth.cert --signer-key certh_auth.key
-```
-
 As an output you will see a device cert and private key with the same given thing name have been created in the directory. Please move these certs to the project's `priv` directory for future use.
 
 ## Building Firmware with Certificates
@@ -45,3 +37,11 @@ In order to use the certificates within the firmware, we can use environment var
 Extra: try to provision an [ATECC608B](https://www.microchip.com/en-us/product/ATECC608B) to provide certificates securely.
 
 But for the purposes of this project, we can use the simple approach. See [the config](../../config/config.exs) lines 14 - 28
+
+You can verify that the config is working correctly by running the console and accessing the application environment:
+
+```elixir
+Application.get_env(:retreat_hack, :device_cert)
+```
+
+After successfully creating a certificate authority and certificate and ensuring you can build them into your firmware, proceed to the [AWS configuration step](aws.md)

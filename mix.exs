@@ -39,6 +39,8 @@ defmodule RetreatHack.MixProject do
       {:circuits_i2c, "~> 1.0"},
       {:nerves_key, "~> 1.1"},
       {:tortoise311, "~> 0.11"},
+      {:vintage_net_wifi, "~> 0.11.0"},
+      {:vintage_net_wizard, "~> 0.4"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.13.0", targets: @all_targets},

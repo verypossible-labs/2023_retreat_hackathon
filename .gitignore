@@ -25,4 +25,4 @@ priv/*.pem
 .envrc
 
 # Ignore system files
-.DS_Store
+**/.DS_Store
